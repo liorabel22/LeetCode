@@ -4,31 +4,25 @@ public class Solution
 {
     public int LengthOfLongestSubstring(string s)
     {
-        int[] lut = new int[256];
+        int[] lut = new int[128];
         int maxLength = 0;
         int left = 0;
+        int stringLength = s.Length;
 
 
-        for (int right = 0; right < s.Length; ++right)
+        for (int right = 0; right < stringLength; ++right)
         {
-            int index = lut[(int)s[right]];
-            if (index == 0)
+            char charAtRight = s[right];
+            int index = lut[charAtRight];
+            if (index != 0)
             {
-                lut[(int)s[right]] = right + 1;
+                
+                left = Math.Max(index, left);
             }
-            else
-            {
-                left = (index > left) ? index : left;
-                lut[(int)s[right]] = right + 1;
-            }
-            maxLength = CheckLength(maxLength, left, right + 1);
+            lut[charAtRight] = right + 1;
+            maxLength = Math.Max(maxLength, right - left + 1);
         }
 
         return maxLength;
-    }
-
-    private int CheckLength(int maxLength, int leftIndex, int rightIndex)
-    {
-        return ((maxLength > (rightIndex - leftIndex)) ? maxLength : (rightIndex - leftIndex));
     }
 }

@@ -2,47 +2,33 @@
 
 public class Solution
 {
-    int[] lut = new int[256];
     public int LengthOfLongestSubstring(string s)
     {
-        int maxSum = 0;
-        int currentSum = 0;
+        int[] lut = new int[256];
+        int maxLength = 0;
+        int left = 0;
 
 
-        InitialLut();
-        for (int i = 0; i < s.Length; ++i)
+        for (int right = 0; right < s.Length; ++right)
         {
-            for (int j = i; j < s.Length; ++j)
+            int index = lut[(int)s[right]];
+            if (index == 0)
             {
-                lut[s[j]]++;
-                if (lut[s[j]] > 1)
-                {
-                    if (currentSum > maxSum)
-                    {
-                        maxSum = currentSum;
-                    }
-                    currentSum = 0;
-                    InitialLut();
-                    lut[s[j]]++;
-                }
-                currentSum++;
-                if (currentSum > maxSum)
-                {
-                    maxSum = currentSum;
-                }
+                lut[(int)s[right]] = right + 1;
             }
-            currentSum = 0;
-            InitialLut();
+            else
+            {
+                left = (index > left) ? index : left;
+                lut[(int)s[right]] = right + 1;
+            }
+            maxLength = CheckLength(maxLength, left, right + 1);
         }
 
-        return maxSum;
+        return maxLength;
     }
 
-    private void InitialLut()
+    private int CheckLength(int maxLength, int leftIndex, int rightIndex)
     {
-        for (int i = 0; i < 256; ++i)
-        {
-            lut[i] = 0;
-        }
+        return ((maxLength > (rightIndex - leftIndex)) ? maxLength : (rightIndex - leftIndex));
     }
 }

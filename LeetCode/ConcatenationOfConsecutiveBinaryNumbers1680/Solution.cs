@@ -9,8 +9,7 @@ public class Solution
 
         for (int i = 1; i <= n; ++i)
         {
-            int length = (int)Math.Log2(i) + 1;
-            result = (((result << length) % mod) + i) % mod;
+            result = ((result << (int)Math.Log2(i) + 1) + i) % mod;
         }
 
 

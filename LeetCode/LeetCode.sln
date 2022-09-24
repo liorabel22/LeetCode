@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberOfStringsThatAppearAsSubstringsInWord1967", "NumberOfStringsThatAppearAsSubstringsInWord1967\NumberOfStringsThatAppearAsSubstringsInWord1967.csproj", "{FE979F8E-B71D-480E-9EAD-0E76DC60D308}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberOfStringsThatAppearAsSubstringsInWord1967", "NumberOfStringsThatAppearAsSubstringsInWord1967\NumberOfStringsThatAppearAsSubstringsInWord1967.csproj", "{FE979F8E-B71D-480E-9EAD-0E76DC60D308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcatenationOfConsecutiveBinaryNumbers1680", "ConcatenationOfConsecutiveBinaryNumbers1680\ConcatenationOfConsecutiveBinaryNumbers1680.csproj", "{64DF8707-33AD-4A22-B1E6-976819768754}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FE979F8E-B71D-480E-9EAD-0E76DC60D308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE979F8E-B71D-480E-9EAD-0E76DC60D308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE979F8E-B71D-480E-9EAD-0E76DC60D308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64DF8707-33AD-4A22-B1E6-976819768754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64DF8707-33AD-4A22-B1E6-976819768754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64DF8707-33AD-4A22-B1E6-976819768754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64DF8707-33AD-4A22-B1E6-976819768754}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
